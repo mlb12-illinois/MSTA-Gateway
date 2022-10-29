@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.json.JSONObject;
 
+import mst_auth_library.MSTAException;
 import mst_auth_library.MST_Auth_Servlet;
 
 
@@ -20,7 +21,7 @@ public class MST_Auth_Client {
 	public void SetLibrary (MST_Auth_Servlet MSTALibrary ) {
 		msta_library = MSTALibrary;			
 	}
-	public void doGet(HttpServletRequest request, HttpServletResponse response, String trustedbody) throws ServletException, IOException {
+	public void doGet(HttpServletRequest request, HttpServletResponse response, String trustedbody) throws ServletException, IOException, MSTAException {
 		/*
     	JSONObject jsonobj =  new JSONObject();
     	jsonobj.put("string1",  "string1");
@@ -40,13 +41,13 @@ public class MST_Auth_Client {
 		HttpResponse resp = msta_library.SendRequest();
 	    response.getWriter().append(resp.body().toString());
 	}
-	public void doPost(HttpServletRequest request, HttpServletResponse response, String trustedbody) throws ServletException, IOException {
+	public void doPost(HttpServletRequest request, HttpServletResponse response, String trustedbody) throws ServletException, IOException, MSTAException {
 	    response.getWriter().append("doPost").append(request.getContextPath());
 	}
-	public void doPut(HttpServletRequest request, HttpServletResponse response, String trustedbody) throws ServletException, IOException {
+	public void doPut(HttpServletRequest request, HttpServletResponse response, String trustedbody) throws ServletException, IOException, MSTAException {
 	    response.getWriter().append("doPut Served at: ").append(request.getContextPath());
 	}
-	public void doDelete(HttpServletRequest request, HttpServletResponse response, String trustedbody) throws ServletException, IOException {
+	public void doDelete(HttpServletRequest request, HttpServletResponse response, String trustedbody) throws ServletException, IOException, MSTAException {
 	    response.getWriter().append("doDelete Served at: ").append(request.getContextPath());
 	}
 }
