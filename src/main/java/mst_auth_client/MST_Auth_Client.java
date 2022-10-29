@@ -7,6 +7,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.JSONObject;
+
 import mst_auth_library.MST_Auth_Servlet;
 
 
@@ -19,6 +21,19 @@ public class MST_Auth_Client {
 		msta_library = MSTALibrary;			
 	}
 	public void doGet(HttpServletRequest request, HttpServletResponse response, String trustedbody) throws ServletException, IOException {
+		/*
+    	JSONObject jsonobj =  new JSONObject();
+    	jsonobj.put("string1",  "string1");
+    	jsonobj.put("string2",  "string2");
+    	jsonobj.put("Int1",  1);
+    	jsonobj.put("Int2",  999999999);
+	    System.out.println("jsonobj raw: " + jsonobj);
+	    System.out.println("jsonobj string: " + jsonobj.toString());
+	    
+	    //String.format("%05d", 999);
+	    System.out.println("jsonobj Int: " + String.format("%05d", 999));   	
+		*/
+		
 		msta_library.SetMicroservice("MSTABusiness");
 		msta_library.SetMethodWithBodyString("GET", "MSTABusiness OY a get");
 		msta_library.SetHeader("Content-Type", "application/json; utf-8");
