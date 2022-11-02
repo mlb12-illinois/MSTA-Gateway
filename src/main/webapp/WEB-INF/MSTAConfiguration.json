@@ -18,9 +18,9 @@
 			"GraphAuthorizations":[{"SEND":["POST"]},{"RECEIVE":["POST"]}]}],
 	"MyMicroserviceName":"MSTAGateway",
 	"MyURI":"http://localhost:8080/MSTA-Gateway/MSTAGateway.html",
-	"MSTA_RESPONSE_TIMEOUT":"10000",
+	"MSTA_RESPONSE_TIMEOUT":"100000",
 	"MSTA_TIMEOUT_WAIT":"3000",
-	"MSTA_CONNECTION_TIMEOUT":"10000",
+	"MSTA_CONNECTION_TIMEOUT":"100000",
 	"MSTA_TRIES":"3",
 	"MyInstanceID" : "########-####-####-####-############"
 }
