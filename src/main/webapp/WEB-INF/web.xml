@@ -11,8 +11,8 @@
   </welcome-file-list>
   <servlet>
     <servlet-name>MSTA_Service</servlet-name>
-    <servlet-class>mst_auth_library.MST_Auth_Servlet</servlet-class>
-  </servlet> 
+	<servlet-class>mst_auth_client.MSTA_Gateway_Servlet</servlet-class>
+   </servlet> 
   <servlet-mapping>
     <servlet-name>MSTA_Service</servlet-name>
     <url-pattern>/MSTAGateway.html</url-pattern>
