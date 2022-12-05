@@ -46,7 +46,7 @@ public class MSTA_Gateway extends MST_Auth_Microservice {
 				msta_library.SetMethodWithBodyString("GET", payload);
 				msta_library.SetHeader("Content-Type", "charset=UTF-8");
 				HttpResponse myresponse = msta_library.SendRequest();
-				//System.out.println("OY1");
+				//System.out.println(myresponse);
 			}
 			else if (communication.equals("Asynchronous")) {
 				msta_library.SetMicroservice("MSTABusiness");
